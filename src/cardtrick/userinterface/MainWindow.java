@@ -42,7 +42,6 @@ public class MainWindow extends JFrame {
 	private JPanel buttonPanel, pileButtonPanel;
 
 	private int round = 0; // index tells which stage program is in
-	private int chosenPile;
 	private ArrayList<String> selectedPiles;
 
 	/**

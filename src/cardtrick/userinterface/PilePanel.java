@@ -83,6 +83,7 @@ public class PilePanel extends JPanel {
 			try {
 				img = ImageIO.read(new File(i));
 			} catch (IOException e) {
+				System.out.println("Image not found at path   " + i)
 				e.printStackTrace();
 			}
 			img = img.getScaledInstance(p.getImgResX(), p.getImgResY(), Image.SCALE_SMOOTH);
