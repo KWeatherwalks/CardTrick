@@ -6,6 +6,11 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class Test extends JFrame {
+    /**
+     *
+     */
+    private static final long serialVersionUID = -5763121319126814673L;
+
     // JFrame
     static JFrame f;
 
