@@ -1,6 +1,8 @@
-package cardtrick.problemdomain;
+package com.kevinweatherwalks.cardtrick.problemdomain;
 
-import java.util.*; // for ArrayList
+// for ArrayList
+import java.util.ArrayList;
+import java.util.Random;
 
 /**
  * This class creates a playing card deck object using the Card class

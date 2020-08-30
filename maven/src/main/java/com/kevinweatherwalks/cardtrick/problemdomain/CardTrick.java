@@ -1,4 +1,4 @@
-package cardtrick.problemdomain;
+package com.kevinweatherwalks.cardtrick.problemdomain;
 
 import java.util.ArrayList;
 

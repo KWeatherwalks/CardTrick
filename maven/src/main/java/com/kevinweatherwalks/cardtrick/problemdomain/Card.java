@@ -1,4 +1,4 @@
-package cardtrick.problemdomain;
+package com.kevinweatherwalks.cardtrick.problemdomain;
 
 /**
  * This class is used to construct Card objects. Card objects hold the card's

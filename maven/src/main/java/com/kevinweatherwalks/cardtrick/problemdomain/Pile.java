@@ -1,6 +1,7 @@
-package cardtrick.problemdomain;
+package com.kevinweatherwalks.cardtrick.problemdomain;
 
-import java.util.*; // for ArrayList
+// for ArrayList
+import java.util.ArrayList;
 
 /**
  * This class splits a deck of cards into multiple piles, which is an array list

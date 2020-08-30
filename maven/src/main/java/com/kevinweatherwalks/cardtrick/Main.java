@@ -1,4 +1,4 @@
-package cardtrick;
+package com.kevinweatherwalks.cardtrick;
 
 /**
  * @(#)Main.java

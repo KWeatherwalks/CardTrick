@@ -1,4 +1,4 @@
-package cardtrick;
+package com.kevinweatherwalks.cardtrick;
 
 /**
  * This class holds the configuration settings for the entire program. Window

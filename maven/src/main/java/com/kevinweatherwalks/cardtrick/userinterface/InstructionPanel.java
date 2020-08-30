@@ -1,4 +1,4 @@
-package cardtrick.userinterface;
+package com.kevinweatherwalks.cardtrick.userinterface;
 
 import java.awt.Font;
 
@@ -6,7 +6,7 @@ import java.awt.Font;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-import cardtrick.problemdomain.CardTrick;
+import com.kevinweatherwalks.cardtrick.problemdomain.CardTrick;
 
 /**
  * This class holds information to be displayed in the main menu during the card

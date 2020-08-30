@@ -1,4 +1,4 @@
-package cardtrick.userinterface;
+package com.kevinweatherwalks.cardtrick.userinterface;
 
 // for grid layout
 import java.awt.GridLayout;
@@ -8,8 +8,8 @@ import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-import cardtrick.problemdomain.Card;
-import cardtrick.problemdomain.CardTrick;
+import com.kevinweatherwalks.cardtrick.problemdomain.Card;
+import com.kevinweatherwalks.cardtrick.problemdomain.CardTrick;
 
 /**
  * This class creates a panel to display the selected card and provide final

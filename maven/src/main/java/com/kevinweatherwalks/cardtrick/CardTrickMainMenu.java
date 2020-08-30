@@ -1,4 +1,4 @@
-package cardtrick;
+package com.kevinweatherwalks.cardtrick;
 
 // for windows
 import java.awt.Dimension;
@@ -13,11 +13,10 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-// for local
-import cardtrick.problemdomain.CardDeck;
-import cardtrick.problemdomain.CardTrick;
-import cardtrick.problemdomain.Pile;
-import cardtrick.userinterface.MainWindow;
+import com.kevinweatherwalks.cardtrick.problemdomain.CardDeck;
+import com.kevinweatherwalks.cardtrick.problemdomain.CardTrick;
+import com.kevinweatherwalks.cardtrick.problemdomain.Pile;
+import com.kevinweatherwalks.cardtrick.userinterface.MainWindow;
 
 /**
  * This class serves as the main menu for the card trick program. Buttons are

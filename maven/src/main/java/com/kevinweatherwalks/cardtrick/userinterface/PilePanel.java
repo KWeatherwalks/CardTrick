@@ -1,19 +1,15 @@
-package cardtrick.userinterface;
+package com.kevinweatherwalks.cardtrick.userinterface;
 
 import java.awt.GridLayout;
-import java.awt.Image;
-import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 
-import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-import cardtrick.problemdomain.Card;
-import cardtrick.problemdomain.CardTrick;
-import cardtrick.problemdomain.Pile;
+import com.kevinweatherwalks.cardtrick.problemdomain.Card;
+import com.kevinweatherwalks.cardtrick.problemdomain.CardTrick;
+import com.kevinweatherwalks.cardtrick.problemdomain.Pile;
 
 /**
  * This class constructs the images for all of the cards to be displayed during

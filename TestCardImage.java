@@ -1,5 +1,3 @@
-package cardtrick;
-
 import java.awt.BorderLayout;
 
 import javax.swing.ImageIcon;

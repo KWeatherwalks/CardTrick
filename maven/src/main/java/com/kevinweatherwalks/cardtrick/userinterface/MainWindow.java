@@ -1,4 +1,4 @@
-package cardtrick.userinterface;
+package com.kevinweatherwalks.cardtrick.userinterface;
 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
@@ -15,12 +15,12 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import cardtrick.CardTrickMainMenu;
-import cardtrick.Settings;
-import cardtrick.problemdomain.Card;
-import cardtrick.problemdomain.CardDeck;
-import cardtrick.problemdomain.CardTrick;
-import cardtrick.problemdomain.Pile;
+import com.kevinweatherwalks.cardtrick.CardTrickMainMenu;
+import com.kevinweatherwalks.cardtrick.Settings;
+import com.kevinweatherwalks.cardtrick.problemdomain.Card;
+import com.kevinweatherwalks.cardtrick.problemdomain.CardDeck;
+import com.kevinweatherwalks.cardtrick.problemdomain.CardTrick;
+import com.kevinweatherwalks.cardtrick.problemdomain.Pile;
 
 /**
  * This class handles all of the GUI enviroment's methods, event handling, and
