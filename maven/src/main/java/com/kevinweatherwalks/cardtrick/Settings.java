@@ -15,10 +15,10 @@ public class Settings {
 	 */
 	public Settings() {
 		// Default resolution settings
-		resX = 1366;
-		resY = 768;
+		this.resX = 1366;
+		this.resY = 768;
 
-		root = "";
+		this.root = "";
 	}
 
 	/**

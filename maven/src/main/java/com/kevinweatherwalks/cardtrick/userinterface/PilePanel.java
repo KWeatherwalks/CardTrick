@@ -1,8 +1,11 @@
 package com.kevinweatherwalks.cardtrick.userinterface;
 
 import java.awt.GridLayout;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 
+import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -79,7 +82,7 @@ public class PilePanel extends JPanel {
 			try {
 				img = ImageIO.read(new File(i));
 			} catch (IOException e) {
-				System.out.println("Image not found at path   " + i)
+				System.out.println("Image not found at path   " + i);
 				e.printStackTrace();
 			}
 			img = img.getScaledInstance(p.getImgResX(), p.getImgResY(), Image.SCALE_SMOOTH);
