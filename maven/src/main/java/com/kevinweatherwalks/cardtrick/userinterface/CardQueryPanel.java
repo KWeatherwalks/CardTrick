@@ -9,7 +9,6 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import com.kevinweatherwalks.cardtrick.problemdomain.Card;
-import com.kevinweatherwalks.cardtrick.problemdomain.CardTrick;
 
 public class CardQueryPanel extends JPanel {
 	/**
@@ -20,7 +19,7 @@ public class CardQueryPanel extends JPanel {
 	private static final long serialVersionUID = 3151049508028779330L;
 	private JLabel queryLabel;
 	private JPanel queryPanel;
-	private CardTrick cTrick;
+	// private CardTrick cTrick;
 	private ImageIcon cImage;
 
 	public CardQueryPanel(Card cd) {

@@ -57,7 +57,7 @@ public class PilePanel extends JPanel {
 		// Create panels
 		panelArr = new ArrayList<>();
 		for (int i = 0; i < p.getNPiles(); i++) {
-			for (Card c : p.getPiles().get(i)) {
+			for (int j = 0; j < p.getPiles().get(i).size(); j++) {
 				panelArr.add(new JPanel());
 			}
 		}
