@@ -1,10 +1,12 @@
 package com.kevinweatherwalks.cardtrick.userinterface;
 
 import java.awt.GridLayout;
+import java.awt.Image;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import javax.imageio.IIOException;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
@@ -52,7 +54,12 @@ public class PilePanel extends JPanel {
 
 		// Set list of image icons
 		imgArr = new ArrayList<>();
-		imgArr = buildImageArray(imgNameArr, p);
+		try {
+			imgArr = buildImageArray(imgNameArr, p);
+		} catch (IIOException e) {
+			System.out.println("Image array failed to build");
+			e.printStackTrace();
+		}
 
 		// Create panels
 		panelArr = new ArrayList<>();
@@ -79,19 +86,22 @@ public class PilePanel extends JPanel {
 	 * @param p   The cards to be used
 	 * @return The image array to be displayed
 	 */
-	private ArrayList<ImageIcon> buildImageArray(ArrayList<String> arr, Pile p) {
+	private ArrayList<ImageIcon> buildImageArray(ArrayList<String> arr, Pile p) throws IIOException {
 		ArrayList<ImageIcon> imgArr = new ArrayList<>();
 		Image img = null;
-		for (String i : arr) {
+		for (String imagePath : arr) {
 			try {
-				img = ImageIO.read(new File(i));
+				System.out.println("Attempting to import " + imagePath);
+				System.out.println(getClass().getResource(imagePath)); // for debugging
+				img = ImageIO.read(new File(imagePath));
+				img = img.getScaledInstance(p.getImgResX(), p.getImgResY(), Image.SCALE_SMOOTH);
+				ImageIcon imgIcon = new ImageIcon(img);
+				imgArr.add(imgIcon);
 			} catch (IOException e) {
-				System.out.println("Image not found at path   " + i);
+				System.out.println("Image not found at path   " + imagePath);
 				e.printStackTrace();
 			}
-			img = img.getScaledInstance(p.getImgResX(), p.getImgResY(), Image.SCALE_SMOOTH);
-			ImageIcon imgIcon = new ImageIcon(img);
-			imgArr.add(imgIcon);
+
 		}
 		return imgArr;
 	}
