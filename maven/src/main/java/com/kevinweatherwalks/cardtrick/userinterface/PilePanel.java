@@ -19,6 +19,10 @@ import com.kevinweatherwalks.cardtrick.problemdomain.Pile;
  * the card trick.
  */
 public class PilePanel extends JPanel {
+	/**
+	 *
+	 */
+	private static final long serialVersionUID = 9080537199601882548L;
 	private ArrayList<String> imgNameArr;
 	private ArrayList<ImageIcon> imgArr;
 	private ArrayList<JPanel> panelArr;

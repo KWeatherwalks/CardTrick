@@ -11,12 +11,13 @@ import javax.swing.JPanel;
 import com.kevinweatherwalks.cardtrick.problemdomain.Card;
 import com.kevinweatherwalks.cardtrick.problemdomain.CardTrick;
 
-/**
- * This class creates a panel to display the selected card and provide final
- * instructions.
- */
-
 public class CardQueryPanel extends JPanel {
+	/**
+	 * This class creates a panel to display the selected card and provide final
+	 * instructions.
+	 */
+
+	private static final long serialVersionUID = 3151049508028779330L;
 	private JLabel queryLabel;
 	private JPanel queryPanel;
 	private CardTrick cTrick;

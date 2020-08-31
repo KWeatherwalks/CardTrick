@@ -14,6 +14,10 @@ import com.kevinweatherwalks.cardtrick.problemdomain.CardTrick;
  */
 
 public class InstructionPanel extends JPanel {
+	/**
+	 *
+	 */
+	private static final long serialVersionUID = 1252905795018160450L;
 	private JLabel instrLabel;
 
 	/**

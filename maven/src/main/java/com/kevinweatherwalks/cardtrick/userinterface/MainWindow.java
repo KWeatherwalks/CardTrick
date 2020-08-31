@@ -27,13 +27,17 @@ import com.kevinweatherwalks.cardtrick.problemdomain.Pile;
  * displays all of the information necessary to run through a card trick.
  */
 public class MainWindow extends JFrame {
+	/**
+	 *
+	 */
+	private static final long serialVersionUID = 2680362268100120041L;
 	private PilePanel cards;
-	private InstructionPanel instructions;
+	private final InstructionPanel instructions;
 	private CardQueryPanel cQuery;
-	private CardTrick cTrick;
+	private final CardTrick cTrick;
 	private Pile piles;
-	private Settings config = new Settings();
-	private CardDeck mergeDeck = new CardDeck();
+	private final Settings config = new Settings();
+	private final CardDeck mergeDeck = new CardDeck();
 	private JButton nextButton, exitButton;
 	private JComboBox chosenNumBox;
 	private JLabel numLabel, pileLabel;
@@ -42,7 +46,7 @@ public class MainWindow extends JFrame {
 	private JPanel buttonPanel, pileButtonPanel;
 
 	private int round = 0; // index tells which stage program is in
-	private ArrayList<String> selectedPiles;
+	private final ArrayList<String> selectedPiles;
 
 	/**
 	 * Constructor
@@ -50,7 +54,7 @@ public class MainWindow extends JFrame {
 	 * @param p  The cards being displayed
 	 * @param ct The card trick object
 	 */
-	public MainWindow(Pile p, CardTrick ct) {
+	public MainWindow(final Pile p, final CardTrick ct) {
 		// Set cardTrick and initialize variables
 		piles = p;
 		cTrick = ct;
@@ -93,13 +97,13 @@ public class MainWindow extends JFrame {
 	 * 
 	 * @param ct The card trick object
 	 */
-	private void buildButtonPanel(CardTrick ct) {
+	private void buildButtonPanel(final CardTrick ct) {
 		// Create panel for buttons
 		buttonPanel = new JPanel();
 		buttonPanel.setLayout(new FlowLayout());
 
 		// Create list for number selection for ComboBox
-		String[] numbers = new String[ct.getNCards()];
+		final String[] numbers = new String[ct.getNCards()];
 		for (int i = 0; i < ct.getNCards(); i++)
 			numbers[i] = String.valueOf(i + 1);
 
@@ -143,7 +147,7 @@ public class MainWindow extends JFrame {
 	 * 
 	 * @param ct The card trick object
 	 */
-	private void buildPileButtonPanel(CardTrick ct) {
+	private void buildPileButtonPanel(final CardTrick ct) {
 		// Create new panel
 		pileButtonPanel = new JPanel();
 
@@ -161,7 +165,7 @@ public class MainWindow extends JFrame {
 		}
 
 		// Add buttons to grid
-		for (JButton btn : buttonArr)
+		for (final JButton btn : buttonArr)
 			pileButtonPanel.add(btn);
 	}
 
@@ -169,7 +173,7 @@ public class MainWindow extends JFrame {
 	 * Private inner class that handles event when user clicks Next button.
 	 */
 	private class NextButtonListener implements ActionListener {
-		public void actionPerformed(ActionEvent e) {
+		public void actionPerformed(final ActionEvent e) {
 			if (round == 0) {
 				// Initialize Round 0 operations
 				remove(cards); // remove pilePanel from BorderLayout
@@ -193,7 +197,7 @@ public class MainWindow extends JFrame {
 				revalidate(); // refresh screen
 
 				// Disable buttons after last round
-				for (JButton b : buttonArr)
+				for (final JButton b : buttonArr)
 					b.setEnabled(false);
 
 				// Call cardQuery routine
@@ -208,7 +212,7 @@ public class MainWindow extends JFrame {
 	 * Private inner class handling Exit event Returns user to main menu
 	 */
 	private class ExitButtonListener implements ActionListener {
-		public void actionPerformed(ActionEvent e) {
+		public void actionPerformed(final ActionEvent e) {
 			new CardTrickMainMenu();
 			dispose(); // exit this window
 		}
@@ -218,9 +222,9 @@ public class MainWindow extends JFrame {
 	 * Private inner class handles event when user adjusts the number selection box.
 	 */
 	private class NumBoxListener implements ActionListener {
-		public void actionPerformed(ActionEvent e) {
+		public void actionPerformed(final ActionEvent e) {
 			// Get selected number
-			String selection = (String) chosenNumBox.getSelectedItem();
+			final String selection = (String) chosenNumBox.getSelectedItem();
 
 			// Set selected number
 			cTrick.setChosenNum(Integer.parseInt(selection));
@@ -231,9 +235,9 @@ public class MainWindow extends JFrame {
 	 * Private inner class handles event when user clicks a pile selection button.
 	 */
 	private class PileButtonListener implements ActionListener {
-		public void actionPerformed(ActionEvent e) {
+		public void actionPerformed(final ActionEvent e) {
 			// Get action command
-			String actionCommand = e.getActionCommand();
+			final String actionCommand = e.getActionCommand();
 
 			// Pile button operations
 			pileBtnOps(actionCommand);
@@ -275,8 +279,8 @@ public class MainWindow extends JFrame {
 		// Store selection
 		selectedPiles.add(pileSelection.get(round).getText());
 		// Rebuild button panel
-		int ps = Integer.parseInt(String.valueOf(selectedPiles.get(round - 1))) - 1;
-		int c = Integer.parseInt(String.valueOf(cTrick.getMagicStr().charAt(round - 1)));
+		final int ps = Integer.parseInt(String.valueOf(selectedPiles.get(round - 1))) - 1;
+		final int c = Integer.parseInt(String.valueOf(cTrick.getMagicStr().charAt(round - 1)));
 		piles.orderPiles(c, ps);
 		// Re-combine piles
 		// THIS CODE WORKS BUT THERE MAY BE BETTER METHOD?
@@ -295,7 +299,7 @@ public class MainWindow extends JFrame {
 	 * 
 	 * @param a The action command to be compared to button
 	 */
-	private void pileBtnOps(String a) {
+	private void pileBtnOps(final String a) {
 		// Find selected pile
 		for (int i = 1; i <= cTrick.getNPiles(); i++) {
 			if (a.equals("Pile " + i)) {
@@ -311,8 +315,8 @@ public class MainWindow extends JFrame {
 	}
 
 	private void cardQuery() {
-		CardDeck pDeck = piles.getPileDeck();
-		Card c = pDeck.getCards().get(cTrick.getChosenNum());
+		final CardDeck pDeck = piles.getPileDeck();
+		final Card c = pDeck.getCards().get(cTrick.getChosenNum());
 
 		// Is this your card?
 		cQuery = new CardQueryPanel(c);

@@ -23,6 +23,10 @@ import com.kevinweatherwalks.cardtrick.userinterface.MainWindow;
  * contained in a GridLayout manager.
  */
 public class CardTrickMainMenu extends JFrame {
+	/**
+	 *
+	 */
+	private static final long serialVersionUID = -8661546408489938686L;
 	private final int WINDOW_WIDTH = 150; // Window width
 	private final int WINDOW_HEIGHT = 250; // Window height
 
@@ -110,7 +114,7 @@ public class CardTrickMainMenu extends JFrame {
 			Pile piles = new Pile(deck, cTrick.getNPiles());
 
 			// Begin trick
-			MainWindow main = new MainWindow(piles, cTrick);
+			new MainWindow(piles, cTrick);
 
 			dispose(); // exit this window
 		}
