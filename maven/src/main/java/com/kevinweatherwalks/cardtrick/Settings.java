@@ -8,7 +8,7 @@ package com.kevinweatherwalks.cardtrick;
 public class Settings {
 	private int resX; // Hold system resolution width
 	private int resY; // Hold system resolution height
-	// private String root; // Hold program's folder location
+	private String root; // Hold program's folder location
 
 	/**
 	 * no-arg Constructor
@@ -39,6 +39,10 @@ public class Settings {
 	 */
 	public void setRoot(String r) {
 		root = r;
+	}
+
+	public String getRoot() {
+		return root;
 	}
 
 	/**

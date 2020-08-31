@@ -39,7 +39,7 @@ public class MainWindow extends JFrame {
 	private final Settings config = new Settings();
 	private final CardDeck mergeDeck = new CardDeck();
 	private JButton nextButton, exitButton;
-	private JComboBox chosenNumBox;
+	private JComboBox<String> chosenNumBox;
 	private JLabel numLabel, pileLabel;
 	private ArrayList<JTextField> pileSelection;
 	ArrayList<JButton> buttonArr;
@@ -108,7 +108,7 @@ public class MainWindow extends JFrame {
 			numbers[i] = String.valueOf(i + 1);
 
 		// Create ComboBox
-		chosenNumBox = new JComboBox(numbers);
+		chosenNumBox = new JComboBox<>(numbers);
 
 		// Create uneditable text field
 		pileSelection = new ArrayList<>();
