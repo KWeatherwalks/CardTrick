@@ -23,5 +23,5 @@ The piles are rearranged into a single deck, according to an algorithm which dep
 ## Final Screen
 The piles are organized so that the user's card is the $n$-th card off the top of the deck, with $n$ being the number chosen at the start.
 
-
+![Your Card is](/demo/magic.png)
 
