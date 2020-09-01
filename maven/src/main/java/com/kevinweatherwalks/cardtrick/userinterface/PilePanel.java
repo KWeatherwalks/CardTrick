@@ -2,7 +2,6 @@ package com.kevinweatherwalks.cardtrick.userinterface;
 
 import java.awt.GridLayout;
 import java.awt.Image;
-import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -92,8 +91,8 @@ public class PilePanel extends JPanel {
 		for (String imagePath : arr) {
 			try {
 				System.out.println("Attempting to import " + imagePath);
-				System.out.println(getClass().getResource(imagePath)); // for debugging
-				img = ImageIO.read(new File(imagePath));
+				System.out.println(this.getClass().getResource(imagePath)); // for debugging
+				img = ImageIO.read(this.getClass().getResource(imagePath));
 				img = img.getScaledInstance(p.getImgResX(), p.getImgResY(), Image.SCALE_SMOOTH);
 				ImageIcon imgIcon = new ImageIcon(img);
 				imgArr.add(imgIcon);

@@ -9,7 +9,7 @@ public class Card {
 	private String suit;
 	private String rank;
 	private String imgName;
-	private final String CARD_FOLDER = "\\classiccards\\";
+	private final String CARD_FOLDER = "/classiccards/";
 	private final String IMG_TYPE = ".png";
 
 	/**
