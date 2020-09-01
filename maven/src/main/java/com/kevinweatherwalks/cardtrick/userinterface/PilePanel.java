@@ -90,8 +90,6 @@ public class PilePanel extends JPanel {
 		Image img = null;
 		for (String imagePath : arr) {
 			try {
-				System.out.println("Attempting to import " + imagePath);
-				System.out.println(this.getClass().getResource(imagePath)); // for debugging
 				img = ImageIO.read(this.getClass().getResource(imagePath));
 				img = img.getScaledInstance(p.getImgResX(), p.getImgResY(), Image.SCALE_SMOOTH);
 				ImageIcon imgIcon = new ImageIcon(img);

@@ -2,7 +2,9 @@ package com.kevinweatherwalks.cardtrick.userinterface;
 
 // for grid layout
 import java.awt.GridLayout;
+import java.io.IOException;
 
+import javax.imageio.ImageIO;
 // for JPanel
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
@@ -33,7 +35,12 @@ public class CardQueryPanel extends JPanel {
 		queryLabel = new JLabel("Drum roll, please...");
 
 		// Create image
-		cImage = new ImageIcon(cd.getImgName());
+		ImageIcon cImage = null;
+		try {
+			cImage = new ImageIcon(ImageIO.read(this.getClass().getResource(cd.getImgName())));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 
 		// Add image to label
 		queryLabel.setIcon(cImage);
