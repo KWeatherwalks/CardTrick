@@ -35,7 +35,6 @@ public class CardQueryPanel extends JPanel {
 		queryLabel = new JLabel("Drum roll, please...");
 
 		// Create image
-		ImageIcon cImage = null;
 		try {
 			cImage = new ImageIcon(ImageIO.read(this.getClass().getResource(cd.getImgName())));
 		} catch (IOException e) {
