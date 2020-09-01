@@ -1,13 +1,20 @@
 package com.kevinweatherwalks.cardtrick;
 
 /**
- * Hello world!
+ * @(#)App.java
  *
+ * 27-Card Trick application
+ *
+ * @author Kevin Weatherwalks
+ * @version 1.00 2020/9/1
  */
-public class App 
-{
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
-    }
+
+/**
+ * A simple main method for the program Alternatively, run CardTrickMainMenu
+ */
+public class App {
+
+	public static void main(String[] args) {
+		new CardTrickMainMenu();
+	}
 }
