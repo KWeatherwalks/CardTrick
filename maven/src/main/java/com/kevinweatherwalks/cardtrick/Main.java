@@ -6,7 +6,7 @@ package com.kevinweatherwalks.cardtrick;
  * 27-Card Trick application
  *
  * @author Kevin Weatherwalks
- * @version 1.00 2015/5/4
+ * @version 1.00 2020/9/1
  */
 
 /**
