@@ -1,4 +1,5 @@
 # Card Trick
+Download and run [CardTrick.jar](https://github.com/KWeatherwalks/CardTrick/blob/main/maven/target/CardTrick.jar) if you have Java installed on your machine.
 
 Popularized by YouTuber [standupmaths](https://youtu.be/l7lP9y7Bb5g).  
 Information theory tells us that in order to locate a card in a standard deck of 27 playing cards, 3 ternary-digits of information are sufficient (with some help from a well-defined process).  
